@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+
+<html>
+	<head>  
+		<title>CHUC MUNG NAM MOI </title>
+		 <script type="text/javascript" src="jquery-2.0.3.js"></script>
+                    <script type="text/javascript" src="jquery.countdownTimer.js"></script>
+					<script type="text/javascript" src="script.js"></script>
+                    <link rel="stylesheet" type="text/css" href="jquery.countdownTimer.css" />
+					
+					
+					
+		<style>
+			body{
+				background-image:url('tet.jpg');
+				 background-repeat: no-repeat;
+    background-size: cover;
+			
+		</style>
+	</head>
+
+	<body>
+	<!-- Pass in variable and increase current date by 1 -->
+	<!-- <div data-countdown="#DateFormat(Date_In + 1, "yyyy/mm/dd")# #TimeFormat(Time_In, "hh:mm:ss")#"></div> -->
+		<div data-countdown="2018/02/15 12:00:00" style="color:red; font-weight:bold; background-color:#d1e0e0; text-align:center"></div>
+<!-- 		<div data-countdown="2020/01/01"></div>
+		<div data-countdown="2018/04/01"></div>
+		<div data-countdown="2019/01/01"></div> -->
+		<!-- <span id="given_date"><span> -->
+		
+		<script>
+			$('[data-countdown]').each(function() {
+			  var $this = $(this), finalDate = $(this).data('countdown');
+			  $this.countdown(finalDate, function(event) {
+				$this.html(event.strftime('%D days %H:%M:%S'));
+				
+			  });
+			});
+			
+		</script>
+			<script>
+                                $(function(){
+                                    $('#given_date').countdowntimer({
+                                        startDate : "2014/10/01 00:00:00",
+                                        dateAndTime : "2018/01/01 00:00:00",
+                                        size : "lg"
+                                    });
+                                });
+                           
+			</script>
+	
+	</body>
+
+<html>
